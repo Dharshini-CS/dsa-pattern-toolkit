@@ -1,0 +1,17 @@
+
+ --> while (r < k) {
+            if (isVowel(s[r]))
+                count++;
+            r++; }
+
+Here we will set the value for r;
+
+--> if (isVowel(s[r]))
+                count++;
+Here the window moves forward and check if the letter is vowels as it increment
+
+ --> if (isVowel(s[l]))
+                count--;
+similar to the above snippet 
+
+    
