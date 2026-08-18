@@ -1,0 +1,26 @@
+Bool present[256] = {false};
+        This creates a fixed-size array of 256 boolean values (enough for all ASCII characters).
+
+        Each entry is initialized to false at the start.
+
+        You can treat this as a lookup table:
+
+        present[c] == true → means character c is already inside the current window.
+
+        present[c] == false → means character c is not in the window yet.
+Example
+        s = "abba"
+
+        Start: all present[] = false.
+
+        r=0 → 'a' → present['a'] = false → set it to true.
+
+        r=1 → 'b' → present['b'] = false → set it to true.
+
+        r=2 → 'b' → present['b'] = true → duplicate!
+
+        Remove left chars: erase 'a' → present['a'] = false, l=1.
+
+        Still duplicate 'b' → erase 'b' → present['b'] = false, l=2.
+
+        Now safe → set present['b'] = true.
