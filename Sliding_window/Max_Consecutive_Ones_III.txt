@@ -1,0 +1,20 @@
+- Start with two pointers (left and right) at the beginning of the array.
+Keep track of how many zeros are in the current window.
+
+- Expand the window by moving right forward:
+
+Count zeros as they appear.
+
+If the number of zeros in the window ≤ k, the window is valid.
+
+- When zeros exceed k:
+
+Move left forward until the window has at most k zeros again.
+
+This ensures the window always represents a subarray where at most k zeros can be flipped.
+
+- Track the maximum window size:
+
+At each step, calculate right - left + 1.
+
+Update the maximum length whenever the current window is larger.
