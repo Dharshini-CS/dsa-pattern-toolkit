@@ -1,0 +1,34 @@
+count[s[right] - 'A']++;
+- Get the unique letters 
+- even if it repeats it would get the same number as index 
+- (HASH MAPPING ) To count the frequency of a letter.
+- For example:
+ right = 0 → s[0] = 'A'
+
+count['A' - 'A']++ → count[0] = 1.
+
+maxCount = max(0, 1) = 1.
+
+right = 1 → s[1] = 'B'
+
+count['B' - 'A']++ → count[1] = 1.
+
+maxCount = max(1, 1) = 1.
+
+
+ maxCount = max(maxCount, count[s[right] - 'A']);
+ - get the maximum count of the letter
+
+while ((right - left + 1) - maxCount > k)
+-  Now to get the non-same letters (ie, the number of characters that are not the majority character.)
+
+ count[s[left] - 'A']--; left++;
+ - shrink the size of the window also expell the count of the characters from the window. 
+
+maxLen = max(maxLen, right - left + 1);
+- Find the maximum length of the window 
+
+
+NOTE:
+maxlen - used for calculating the length of the window
+maxcount - to count the frequency of the letter
